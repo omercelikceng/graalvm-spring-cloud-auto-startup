@@ -1,0 +1,30 @@
+
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          replication-factor: 1
+      bindings:
+        listenPersonData-in-0:
+          destination: deneme-person-topic
+          binder: kafka1
+          group: omer-celik-2241
+          consumer:
+            auto-startup: false
+        person-topic-output:
+          destination: deneme-person-topic
+          binder: kafka1
+      function:
+        definition: listenPersonData;
+      binders:
+        kafka1:
+          type: kafka
+          environment:
+            spring:
+              cloud:
+                stream:
+                  kafka:
+                    binder:
+                      brokers: localhost:19092
+                      autoCreateTopics: true

@@ -1,0 +1,17 @@
+[
+  {
+    "condition": {
+      "typeReachable": "org.springframework.kafka.security.jaas.KafkaJaasLoginModuleInitializer"
+    },
+    "name": "sun.security.provider.ConfigFile",
+    "allPublicConstructors": true
+  },
+  {
+    "name": "org.springframework.cloud.stream.binding.InputBindingLifecycle",
+    "allDeclaredFields": true
+  },
+  {
+    "name": "org.springframework.cloud.stream.binding.OutputBindingLifecycle",
+    "allDeclaredFields": true
+  }
+]
